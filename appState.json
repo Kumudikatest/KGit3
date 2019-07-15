@@ -1,0 +1,89 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "30bc8d22-bd71-4e36-aad4-6902422a85e6": {
+        "id": "30bc8d22-bd71-4e36-aad4-6902422a85e6",
+        "parent": null,
+        "name": "KGit3",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "ddb36e10-0733-4704-b07f-d0a5e1e892a3"
+        ],
+        "isRemovable": false,
+        "filePath": "KGit3"
+      },
+      "ddb36e10-0733-4704-b07f-d0a5e1e892a3": {
+        "id": "ddb36e10-0733-4704-b07f-d0a5e1e892a3",
+        "parent": "30bc8d22-bd71-4e36-aad4-6902422a85e6",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "KGit3/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [],
+        "customSecurityPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Resource": "arn:aws:execute-api:us-east-1::///",
+              "Action": [
+                "*"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "30bc8d22-bd71-4e36-aad4-6902422a85e6",
+    "openFiles": [
+      "ddb36e10-0733-4704-b07f-d0a5e1e892a3"
+    ],
+    "currentFileId": "ddb36e10-0733-4704-b07f-d0a5e1e892a3",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "KGit3",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1563165588369
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "KGit3",
+      "url": "https://github.com/Kumudikatest/KGit3"
+    }
+  }
+}
