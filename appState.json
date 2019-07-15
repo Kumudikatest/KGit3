@@ -30,7 +30,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "cweKTestSQSRule1",
+            "config": {}
+          }
+        ],
         "customSecurityPolicy": {
           "Version": "2012-10-17",
           "Statement": [
@@ -43,9 +48,10 @@
             },
             {
               "Effect": "Allow",
-              "Resource": "arn:aws:dynamodb:us-east-2::/",
+              "Resource": "arn:aws:dynamodb:us-east-2:test-ID:test-Type/test-path",
               "Action": [
-                "dynamodb:BatchGetItem"
+                "dynamodb:BatchGetItem",
+                "dynamodb:BatchWriteItem"
               ]
             }
           ]
@@ -58,7 +64,17 @@
       "ddb36e10-0733-4704-b07f-d0a5e1e892a3"
     ],
     "currentFileId": "ddb36e10-0733-4704-b07f-d0a5e1e892a3",
-    "resources": {},
+    "resources": {
+      "cweKTestSQSRule1": {
+        "name": "cweKTestSQSRule1",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 1,
+          "arn": "arn:aws:events:us-east-1:318300609668:rule/KTestSQSRule1",
+          "name": "KTestSQSRule1"
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -84,7 +100,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1563166643560
+    "lastSave": 1563166647498
   },
   "VCS_STATE": {
     "provider": "GitHub",
