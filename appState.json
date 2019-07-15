@@ -43,10 +43,9 @@
             },
             {
               "Effect": "Allow",
-              "Resource": "arn:aws:dynamodb:us-east-2:test-ID:test-Type/test-path",
+              "Resource": "arn:aws:dynamodb:us-east-2::/",
               "Action": [
-                "dynamodb:BatchGetItem",
-                "dynamodb:BatchWriteItem"
+                "dynamodb:BatchGetItem"
               ]
             }
           ]
@@ -85,7 +84,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1563165990933
+    "lastSave": 1563166643560
   },
   "VCS_STATE": {
     "provider": "GitHub",
